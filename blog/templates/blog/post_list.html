@@ -6,17 +6,15 @@
             <div>
                 <h1><a href="">Grupos System Network</a></h1>
             </div>
+          {% for post in posts %}
 
             <div>
-                <p>published: 14.06.2014, 12:14</p>
-                <h2><a href="">Mi Primer Post en este blog</a></h2>
-                <p>Compañia dedicada al diseño de pagina Web, Instalacion y mantenimiento de Sistemas informaticos, ademas de reparacion y mantenimiento de computadoras asi como asesorias para el diseño de volantes para tu negocios.</p>
+              <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaks }}</p>
             </div>
 
-            <div>
-                <p>published: 14.06.2014, 12:14</p>
-                <h2><a href="">My second post</a></h2>
-                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-            </div>
+          {% endfor %}
+
         </body>
     </html>
